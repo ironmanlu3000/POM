@@ -15,7 +15,7 @@ public class Logout {
   @FindBy(linkText = "Logout")
   WebElement logout1;
   
-  public void hlogount() {
+  public void hlogout() {
 	  logout1.click();
   }
 }

@@ -6,11 +6,11 @@
       <class name="TestCases.TestCases">
         <methods>
           <include name="TearDown"/>
+          <include name="SearchResult" invocation-numbers="1"/>
           <include name="WindowHandles"/>
           <include name="setUPReport"/>
           <include name="URL"/>
           <include name="LaunchURL"/>
-          <include name="dologin"/>
           <include name="Setup"/>
           <include name="getresult"/>
         </methods>

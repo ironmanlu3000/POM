@@ -60,7 +60,8 @@ public class BaseTest {
 		 	   .addSystemInfo("Environment", "Automation testing");
 		 extent.loadConfig(new File("config.xml"));	*/ 
 	 } 
-	 @BeforeMethod
+	@SuppressWarnings("deprecation")
+	@BeforeMethod
 	 public void URL() {
 		 driver.get(prop.getProperty("url"));	
 		  driver.manage().window().maximize();

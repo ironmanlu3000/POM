@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,10 +32,12 @@ public class Login {
 	}
 
 	public void username(String userName) {
+		uName.clear();
 		uName.sendKeys(userName);
 	}
 
 	public void password(String userPass) {
+		uPass.clear();
 		uPass.sendKeys(userPass);
 	}
 
@@ -44,9 +47,14 @@ public class Login {
 	}
 	
 	public boolean varifyresult() {
-		return Gettitle().equalsIgnoreCase("REETREE - Your Online Shopping Hub | My Account");
+		try {
+			return driver.findElement(By.linkText("Logout")).isDisplayed();
+		}catch(Exception e){
+			return false;
+		}
+		//return Gettitle().equalsIgnoreCase("https://reetree.in/my-account/orders/");
 	}
 	public String Gettitle() {
-		return driver.getTitle();
+		return driver.getCurrentUrl();
 	}
 }
